@@ -12,42 +12,42 @@ const homeVideos = [
     id: 1, 
     title: "Mobile Legends Fanny Montage #1", 
     thumbnail: "https://images.unsplash.com/photo-1536240478700-b869070f9279?q=80&w=1600&auto=format&fit=crop", 
-    videoSrc: "/src/assets/video/Mobile Legend-FannyMontage.mp4", // User will add path like "/src/assets/video/video1.mp4"
+    videoSrc: "/video/Mobile Legend-FannyMontage.mp4",
     category: "Video Edit" 
   },
   { 
     id: 2, 
     title: "Zenpos-Expo", 
     thumbnail: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1600&auto=format&fit=crop", 
-    videoSrc: "/src/assets/video/Zenpos.mp4", 
+    videoSrc: "/video/Zenpos.mp4", 
     category: "Motion Graphics" 
   },
   { 
     id: 3, 
     title: "Valorant-Iso Highlights", 
     thumbnail: "https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1600&auto=format&fit=crop", 
-    videoSrc: "/src/assets/video/ValorantIso.mp4", 
+    videoSrc: "/video/ValorantIso.mp4", 
     category: "Gaming" 
   },
   { 
     id: 4, 
     title: "Cinematic#1", 
     thumbnail: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=1600&auto=format&fit=crop", 
-    videoSrc: "/src/assets/video/TelescopicCinematic.mp4", 
+    videoSrc: "/video/TelescopicCinematic.mp4", 
     category: "Lifestyle" 
   },
   { 
     id: 5, 
     title: "Cinematic Edit#2", 
     thumbnail: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=1600&auto=format&fit=crop", 
-    videoSrc: "/src/assets/video/Cinematic1.mp4", 
+    videoSrc: "/video/Cinematic1.mp4", 
     category: "Commercial" 
   },
   { 
     id: 6, 
     title: "Typography#1", 
     thumbnail: "https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=1600&auto=format&fit=crop", 
-    videoSrc: "/src/assets/video/Typography1.mp4", 
+    videoSrc: "/video/Typography1.mp4", 
     category: "Short Film" 
   },
 ]

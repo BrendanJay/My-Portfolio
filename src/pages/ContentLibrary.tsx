@@ -10,12 +10,12 @@ import { VideoPlayer } from "../components/VideoPlayer"
 
 // More comprehensive video library - user will replace paths with actual .mp4 files later
 const allVideos = [
-  { id: 1, title: "Cinematic Edit #1", thumbnail: "https://images.unsplash.com/photo-1536240478700-b869070f9279?q=80&w=1600&auto=format&fit=crop", videoSrc: "Mobile Legend-FannyMontage", category: "Video Edit" },
-  { id: 2, title: "Product Showcase", thumbnail: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1600&auto=format&fit=crop", videoSrc: "", category: "Motion Graphics" },
-  { id: 3, title: "Gaming Montage", thumbnail: "https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1600&auto=format&fit=crop", videoSrc: "", category: "Gaming" },
-  { id: 4, title: "Travel Vlog", thumbnail: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=1600&auto=format&fit=crop", videoSrc: "", category: "Lifestyle" },
-  { id: 5, title: "Commercial Ad", thumbnail: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=1600&auto=format&fit=crop", videoSrc: "", category: "Commercial" },
-  { id: 6, title: "Short Film Clip", thumbnail: "https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=1600&auto=format&fit=crop", videoSrc: "", category: "Short Film" },
+  { id: 1, title: "Mobile Legends Fanny Montage #1", thumbnail: "https://images.unsplash.com/photo-1536240478700-b869070f9279?q=80&w=1600&auto=format&fit=crop", videoSrc: "/video/Mobile Legend-FannyMontage.mp4", category: "Video Edit" },
+  { id: 2, title: "Zenpos-Expo", thumbnail: "https://images.unsplash.com/photo-1523275335684-37898b6baf30?q=80&w=1600&auto=format&fit=crop", videoSrc: "/video/Zenpos.mp4", category: "Motion Graphics" },
+  { id: 3, title: "Valorant-Iso Highlights", thumbnail: "https://images.unsplash.com/photo-1542751371-adc38448a05e?q=80&w=1600&auto=format&fit=crop", videoSrc: "/video/ValorantIso.mp4", category: "Gaming" },
+  { id: 4, title: "Cinematic#1", thumbnail: "https://images.unsplash.com/photo-1476514525535-07fb3b4ae5f1?q=80&w=1600&auto=format&fit=crop", videoSrc: "/video/TelescopicCinematic.mp4", category: "Lifestyle" },
+  { id: 5, title: "Cinematic Edit#2", thumbnail: "https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?q=80&w=1600&auto=format&fit=crop", videoSrc: "/video/Cinematic1.mp4", category: "Commercial" },
+  { id: 6, title: "Typography#1", thumbnail: "https://images.unsplash.com/photo-1485846234645-a62644f84728?q=80&w=1600&auto=format&fit=crop", videoSrc: "/video/Typography1.mp4", category: "Short Film" },
   { id: 7, title: "Music Video Promo", thumbnail: "https://images.unsplash.com/photo-1511671782779-c97d3d27a1d4?q=80&w=1600&auto=format&fit=crop", videoSrc: "", category: "Music Video" },
   { id: 8, title: "Sports Highlights", thumbnail: "https://images.unsplash.com/photo-1517649763962-0c623066013b?q=80&w=1600&auto=format&fit=crop", videoSrc: "", category: "Sports" },
   { id: 9, title: "Nature Documentary", thumbnail: "https://images.unsplash.com/photo-1441974231531-c6227db76b6e?q=80&w=1600&auto=format&fit=crop", videoSrc: "", category: "Nature" },

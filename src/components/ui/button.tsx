@@ -5,28 +5,27 @@ import { Slot } from "@radix-ui/react-slot"
 import { cn } from "../../lib/utils"
 
 const buttonVariants = cva(
-  "inline-flex items-center justify-center gap-2 whitespace-nowrap rounded-md text-sm font-medium transition-colors focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
+  "inline-flex items-center justify-center gap-2 whitespace-nowrap text-sm font-medium transition-all focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-white/20 focus-visible:ring-offset-0 disabled:pointer-events-none disabled:opacity-50 [&_svg]:pointer-events-none [&_svg]:size-4 [&_svg]:shrink-0",
   {
     variants: {
       variant: {
         default:
-          "bg-primary text-primary-foreground shadow hover:bg-primary/90",
+          "bg-white text-black hover:bg-white/90 shadow-[0_1px_0_0_rgba(255,255,255,0.06)_inset,0_0_0_1px_rgba(255,255,255,0.08),0_1px_2px_0_rgba(0,0,0,0.12)]",
         destructive:
-          "bg-destructive text-destructive-foreground shadow-sm hover:bg-destructive/90",
+          "bg-red-500 text-white hover:bg-red-500/90 shadow-[0_1px_0_0_rgba(255,255,255,0.08)_inset,0_0_0_1px_rgba(239,68,68,0.3)]",
         outline:
-          "border border-input bg-background shadow-sm hover:bg-accent hover:text-accent-foreground",
+          "border border-white/10 bg-white/[0.02] text-gray-200 hover:bg-white/[0.04] hover:border-white/15 shadow-[0_1px_0_0_rgba(255,255,255,0.04)_inset]",
         secondary:
-          "bg-secondary text-secondary-foreground shadow-sm hover:bg-secondary/80",
-        ghost: "hover:bg-accent hover:text-accent-foreground",
-        link: "text-primary underline-offset-4 hover:underline",
-        neon: "bg-gradient-to-r from-primary to-accent text-white neon-glow-purple hover:opacity-90 transition-all duration-300",
-        'neon-cyan': "border border-secondary text-secondary hover:bg-secondary/10 neon-glow-cyan transition-all duration-300",
+          "bg-white/[0.06] text-gray-100 hover:bg-white/[0.1] border border-white/10",
+        ghost:
+          "text-gray-300 hover:bg-white/[0.05] hover:text-white",
+        link: "text-white underline-offset-4 hover:underline font-medium",
       },
       size: {
-        default: "h-9 px-4 py-2",
+        default: "h-10 px-4 py-2 rounded-md",
         sm: "h-8 rounded-md px-3 text-xs",
-        lg: "h-10 rounded-md px-8",
-        icon: "h-9 w-9",
+        lg: "h-11 rounded-md px-6",
+        icon: "h-10 w-10 rounded-md",
       },
     },
     defaultVariants: {

@@ -24,12 +24,13 @@ export function CustomCursor() {
 
       // Detect if hovering over interactive elements
       const target = e.target as HTMLElement
-      const isInteractive =
+      const isInteractive = Boolean(
         target.tagName === "A" ||
-        target.tagName === "BUTTON" ||
-        target.closest("a") ||
-        target.closest("button") ||
-        target.getAttribute("role") === "button"
+          target.tagName === "BUTTON" ||
+          target.closest("a") ||
+          target.closest("button") ||
+          target.getAttribute("role") === "button",
+      )
       setIsHoveringInteractive(isInteractive)
 
       // Create expanding ring effect periodically

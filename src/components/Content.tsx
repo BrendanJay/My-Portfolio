@@ -21,7 +21,7 @@ const homeVideos: VideoCard[] = [
     title: "Mobile Legends Fanny Montage #1",
     thumbnail: "https://images.unsplash.com/photo-1536240478700-b869070f9279?q=80&w=1600&auto=format&fit=crop",
     videoSrc: "/video/Mobile Legend-FannyMontage.mp4",
-    category: "Video Edit",
+    category: "Gaming",
   },
   {
     id: 2,

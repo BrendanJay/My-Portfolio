@@ -121,8 +121,9 @@ export function Hero() {
               className="text-[15px] text-gray-400 leading-relaxed max-w-xl text-center lg:text-left mx-auto lg:mx-0"
             >
               Building reliable systems at the intersection of software and hardware. 
-              Experienced in full-stack web development, embedded IoT solutions, and 
-              network infrastructure deployment.
+              Specialized in full-stack web development, embedded IoT solutions, workflow 
+              automation, and AI-driven infrastructure. Proficient in Activepieces orchestration 
+              and modern deployment strategies.
             </motion.p>
 
             <motion.div

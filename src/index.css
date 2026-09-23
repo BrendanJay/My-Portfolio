@@ -41,7 +41,7 @@
 }
 
 html {
-  scroll-behavior: smooth;
+  scroll-behavior: auto; /* Disable native scroll-behavior since Lenis handles smooth scrolling */
 }
 
 body {
@@ -52,6 +52,19 @@ body {
   font-feature-settings: "cv11", "ss01";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  cursor: none; /* Hide default cursor for custom cursor */
+}
+
+/* Ensure cursor is hidden everywhere */
+* {
+  cursor: none !important;
+}
+
+/* Allow default cursor on specific interactive elements if needed */
+input,
+textarea,
+select {
+  cursor: text !important;
 }
 
 ::selection {

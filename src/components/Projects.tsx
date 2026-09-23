@@ -16,7 +16,7 @@ const projects: Project[] = [
   {
     title: "Gym Management System",
     description:
-      "A comprehensive gym management platform with member tracking, class scheduling, and integrated payment processing to streamline operations.",
+      "A comprehensive full-stack gym management platform with member tracking, class scheduling, and integrated payment processing. Features real-time member status updates, automated class notifications, and analytics dashboards for performance monitoring.",
     tags: ["React", "Node.js", "MongoDB", "Express"],
     architecture: [
       { label: "SPA", icon: Layers },
@@ -29,7 +29,7 @@ const projects: Project[] = [
   {
     title: "Petify",
     description:
-      "A pet adoption and community platform connecting pet lovers with animals in need. Features real-time community chat and listing services.",
+      "A pet adoption and community platform connecting pet lovers with animals in need. Implements real-time community chat, live listing services, and adoption workflow management with verified user authentication and trust scoring.",
     tags: ["React", "Firebase", "Tailwind", "WebSocket"],
     architecture: [
       { label: "SPA", icon: Layers },
@@ -42,7 +42,7 @@ const projects: Project[] = [
   {
     title: "Bidbay",
     description:
-      "A live auction platform with real-time bidding, user authentication, and secure Stripe payment processing for high-trust transactions.",
+      "A production-grade live auction platform with real-time bidding, user authentication, and secure Stripe payment processing. Handles concurrent bidding, bid validation, and automated auction closure with WebSocket-based price synchronization across all connected clients.",
     tags: ["Next.js", "PostgreSQL", "Stripe", "WebSocket"],
     architecture: [
       { label: "SSR", icon: Layers },
@@ -59,10 +59,10 @@ export function Projects() {
     <section id="projects" className="py-24 px-4 sm:px-6 relative bg-black/20">
       <div className="max-w-6xl mx-auto space-y-14">
         <motion.div
-          initial={{ opacity: 0, y: 12 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
           className="flex flex-col md:flex-row md:items-end justify-between gap-6"
         >
           <div>
@@ -86,10 +86,10 @@ export function Projects() {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, y: 16 }}
+          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.6 }}
+          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
         >
           <Card className="overflow-hidden border-white/[0.08] bg-gradient-to-b from-white/[0.03] to-white/[0.008] shadow-[0_0_0_1px_rgba(255,255,255,0.03)_inset]">
             <div className="grid grid-cols-1 lg:grid-cols-[1.1fr,1fr]">

@@ -70,10 +70,10 @@ export function Content() {
     <section id="content" className="py-24 px-4 sm:px-6 relative overflow-hidden bg-black/20">
       <div className="max-w-6xl mx-auto space-y-14">
         <motion.div
-          initial={{ opacity: 0, y: 12 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
           className="flex flex-col md:flex-row md:items-end justify-between gap-6"
         >
           <div>
@@ -101,10 +101,10 @@ export function Content() {
           {homeVideos.map((video, index) => (
             <motion.div
               key={video.id}
-              initial={{ opacity: 0, y: 12 }}
+              initial={{ opacity: 0, y: 16 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true, margin: "-60px" }}
-              transition={{ duration: 0.4, delay: index * 0.05 }}
+              transition={{ duration: 0.4, delay: index * 0.06, ease: [0.22, 1, 0.36, 1] }}
             >
               <Card
                 className="group relative overflow-hidden cursor-pointer aspect-video border-white/[0.06] bg-white/[0.015] hover:bg-white/[0.03] hover:border-white/[0.14] transition-all duration-300"

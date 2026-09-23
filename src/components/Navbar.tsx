@@ -1,9 +1,10 @@
-import { useState, useEffect } from "react"
+import { useState, useEffect, useRef } from "react"
 import { motion, AnimatePresence } from "framer-motion"
 import { Menu, X, Terminal } from "lucide-react"
 import { Button } from "./ui/button"
 import { cn } from "../lib/utils"
 import { Link, useLocation } from "react-router-dom"
+import { scrollToElement } from "../lib/useLenis"
 
 const navLinks = [
   { name: "About", href: "/#about" },
@@ -19,6 +20,7 @@ export function Navbar() {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
   const location = useLocation()
   const isHome = location.pathname === "/"
+  const lenisRef = useRef<any>(null)
 
   useEffect(() => {
     const handleScroll = () => {
@@ -27,6 +29,33 @@ export function Navbar() {
     window.addEventListener("scroll", handleScroll)
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
+
+  // Get Lenis instance from window if available
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      lenisRef.current = (window as any).lenis || null
+    }
+  }, [])
+
+  const handleNavClick = (href: string) => (e: React.MouseEvent<HTMLAnchorElement>) => {
+    // Only handle if on home page and it's a hash link
+    if (!isHome || !href.startsWith("/#")) {
+      return
+    }
+
+    e.preventDefault()
+    const elementId = href.replace("/#", "")
+
+    // Use Lenis if available, otherwise fallback to native smooth scroll
+    if (lenisRef.current) {
+      scrollToElement(lenisRef.current, elementId)
+    } else {
+      const element = document.getElementById(elementId)
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth", block: "start" })
+      }
+    }
+  }
 
   return (
     <nav
@@ -65,6 +94,7 @@ export function Navbar() {
               >
                 <Link
                   to={link.href}
+                  onClick={handleNavClick(link.href)}
                   className="relative px-3.5 py-1.5 text-[13px] font-medium text-gray-400 hover:text-white transition-colors rounded-md hover:bg-white/[0.04]"
                 >
                   {link.name}
@@ -110,7 +140,10 @@ export function Navbar() {
                 <Link
                   key={link.name}
                   to={link.href}
-                  onClick={() => setIsMobileMenuOpen(false)}
+                  onClick={(e) => {
+                    handleNavClick(link.href)(e as React.MouseEvent<HTMLAnchorElement>)
+                    setIsMobileMenuOpen(false)
+                  }}
                   className="text-[14px] font-medium text-gray-300 hover:text-white px-3.5 py-2.5 rounded-lg hover:bg-white/[0.04] transition-colors"
                 >
                   {link.name}

@@ -112,6 +112,13 @@ const softwareMatrix: Competency[] = [
       "CI/CD pipelines, Vercel/Netlify deployments, and environment provisioning.",
     proficiency: "Intermediate",
   },
+  {
+    name: "AI & Workflow Automation",
+    icon: Layers,
+    description:
+      "Activepieces workflow orchestration, API integrations, and no-code automation architecture for business process automation.",
+    proficiency: "Advanced",
+  },
 ]
 
 const proficiencyStyles: Record<string, string> = {
@@ -129,10 +136,10 @@ function MatrixCard({
 }) {
   return (
     <motion.div
-      initial={{ opacity: 0, y: 10 }}
+      initial={{ opacity: 0, y: 12 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "-60px" }}
-      transition={{ duration: 0.4, delay: index * 0.05 }}
+      transition={{ duration: 0.4, delay: index * 0.05, ease: [0.22, 1, 0.36, 1] }}
     >
       <Card className="h-full border-white/[0.06] bg-white/[0.015] hover:bg-white/[0.03] hover:border-white/[0.12] transition-all duration-300">
         <CardContent className="p-5 space-y-4">
@@ -175,10 +182,10 @@ export function Skills() {
     >
       <div className="max-w-6xl mx-auto space-y-16">
         <motion.div
-          initial={{ opacity: 0, y: 12 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
           className="flex flex-col md:flex-row md:items-end justify-between gap-6"
         >
           <div>
@@ -207,10 +214,10 @@ export function Skills() {
         <div className="space-y-12">
           {/* Hardware & Network */}
           <motion.div
-            initial={{ opacity: 0, y: 10 }}
+            initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.4 }}
+            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
             className="space-y-5"
           >
             <div className="flex items-center justify-between">
@@ -241,10 +248,10 @@ export function Skills() {
 
           {/* Software Development */}
           <motion.div
-            initial={{ opacity: 0, y: 10 }}
+            initial={{ opacity: 0, y: 16 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true, margin: "-80px" }}
-            transition={{ duration: 0.4 }}
+            transition={{ duration: 0.5, ease: [0.22, 1, 0.36, 1] }}
             className="space-y-5"
           >
             <div className="flex items-center justify-between">

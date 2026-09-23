@@ -20,10 +20,10 @@ export function Contact() {
     <section id="contact" className="py-24 px-4 sm:px-6 relative">
       <div className="max-w-5xl mx-auto space-y-14">
         <motion.div
-          initial={{ opacity: 0, y: 12 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
           className="text-center"
         >
           <div className="inline-flex items-center gap-2 mb-4">
@@ -43,10 +43,10 @@ export function Contact() {
         </motion.div>
 
         <motion.div
-          initial={{ opacity: 0, y: 16 }}
+          initial={{ opacity: 0, y: 24 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-80px" }}
-          transition={{ duration: 0.5, delay: 0.1 }}
+          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
         >
           <Card className="overflow-hidden border-white/[0.06] bg-gradient-to-b from-white/[0.025] to-white/[0.008] shadow-[0_1px_0_0_rgba(255,255,255,0.03)_inset]">
             <CardContent className="p-8 md:p-12 space-y-10">
@@ -98,17 +98,17 @@ export function Contact() {
                     {
                       icon: Github,
                       label: "GitHub",
-                      href: "https://github.com",
+                      href: "https://github.com/OnichanJay",
                     },
                     {
                       icon: Linkedin,
                       label: "LinkedIn",
-                      href: "https://linkedin.com",
+                      href: "https://linkedin.com/in/brendan-jay-condes",
                     },
                     {
                       icon: Twitter,
                       label: "Twitter / X",
-                      href: "https://twitter.com",
+                      href: "https://twitter.com/OnichanJay",
                     },
                   ].map((social) => (
                     <motion.a

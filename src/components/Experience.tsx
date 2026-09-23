@@ -37,13 +37,14 @@ const timeline: TimelineEntry[] = [
     duration: "Seminar + Workshop",
     status: "Completed",
     description:
-      "Regional training program focused on applied artificial intelligence, sustainable development workflows, and modern automation tooling with hands-on Activepieces integration.",
+      "Regional training program focused on applied artificial intelligence, sustainable development workflows, and modern automation tooling. Intensive hands-on workshop covering end-to-end workflow automation using Activepieces, cloud integrations, and AI-driven process optimization for business automation and sustainable development initiatives.",
     highlights: [
-      "Learned end-to-end workflow automation patterns using Activepieces for internal processes and integrations.",
-      "Studied AI-driven approaches for sustainable development goals in partnership with regional engineering chapters.",
-      "Completed hands-on labs connecting APIs, triggers, and scheduled jobs within no-code/low-code pipelines.",
+      "Mastered Activepieces workflow orchestration: designed multi-step automation workflows with API integrations, conditional logic, and trigger-based execution patterns.",
+      "Built practical automation projects connecting third-party services (databases, APIs, SaaS tools) into unified workflow pipelines for real-world business scenarios.",
+      "Explored AI-powered automation for sustainable development goals, including predictive analytics integration and intelligent task routing within workflow systems.",
+      "Completed advanced labs on error handling, workflow monitoring, execution history tracking, and performance optimization in production automation environments.",
     ],
-    tags: ["Activepieces", "Workflow Automation", "AI", "Sustainable Development", "No-Code / Low-Code"],
+    tags: ["Activepieces", "Workflow Automation", "AI Integration", "API Orchestration", "No-Code/Low-Code", "Business Process Automation", "Sustainable Development"],
   },
   {
     id: "ojt-codelikeus",
@@ -71,10 +72,10 @@ export function Experience() {
     <section id="experience" className="py-24 px-4 sm:px-6 relative">
       <div className="max-w-6xl mx-auto space-y-14">
         <motion.div
-          initial={{ opacity: 0, y: 12 }}
+          initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true, margin: "-100px" }}
-          transition={{ duration: 0.5 }}
+          transition={{ duration: 0.6, ease: [0.22, 1, 0.36, 1] }}
           className="flex flex-col md:flex-row md:items-end justify-between gap-6"
         >
           <div>
@@ -104,10 +105,10 @@ export function Experience() {
             {timeline.map((entry, entryIndex) => (
               <motion.div
                 key={entry.id}
-                initial={{ opacity: 0, y: 16 }}
+                initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, margin: "-80px" }}
-                transition={{ duration: 0.5, delay: entryIndex * 0.1 }}
+                transition={{ duration: 0.5, delay: entryIndex * 0.1, ease: [0.22, 1, 0.36, 1] }}
                 className="relative"
               >
                 <div className="absolute left-4 md:left-8 top-7 -translate-x-1/2 w-3 h-3 rounded-full bg-[#08090a] border border-white/15 z-10 hidden sm:block">
@@ -192,10 +193,10 @@ export function Experience() {
                             {entry.highlights.map((item, i) => (
                               <motion.li
                                 key={i}
-                                initial={{ opacity: 0, x: -6 }}
+                                initial={{ opacity: 0, x: -8 }}
                                 whileInView={{ opacity: 1, x: 0 }}
                                 viewport={{ once: true }}
-                                transition={{ duration: 0.35, delay: 0.15 + i * 0.06 }}
+                                transition={{ duration: 0.4, delay: 0.15 + i * 0.07, ease: [0.22, 1, 0.36, 1] }}
                                 className="flex items-start gap-3 text-[13.5px] text-gray-300 leading-relaxed"
                               >
                                 <CheckCircle2

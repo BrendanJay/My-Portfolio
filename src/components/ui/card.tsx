@@ -5,16 +5,29 @@ import { cn } from "../../lib/utils"
 const Card = React.forwardRef<
   HTMLDivElement,
   React.HTMLAttributes<HTMLDivElement>
->(({ className, ...props }, ref) => (
-  <div
-    ref={ref}
-    className={cn(
-      "rounded-xl border bg-card text-card-foreground shadow glass-panel",
-      className
-    )}
-    {...props}
-  />
-))
+>(({ className, onPointerMove, onPointerLeave, ...props }, ref) => {
+  const handlePointerMove = (event: React.PointerEvent<HTMLDivElement>) => {
+    onPointerMove?.(event)
+    if (event.pointerType !== "mouse") return
+
+    const bounds = event.currentTarget.getBoundingClientRect()
+    event.currentTarget.style.setProperty("--spotlight-x", `${event.clientX - bounds.left}px`)
+    event.currentTarget.style.setProperty("--spotlight-y", `${event.clientY - bounds.top}px`)
+  }
+
+  return (
+    <div
+      ref={ref}
+      className={cn(
+        "spotlight-card rounded-xl border bg-card text-card-foreground shadow glass-panel",
+        className
+      )}
+      onPointerMove={handlePointerMove}
+      onPointerLeave={onPointerLeave}
+      {...props}
+    />
+  )
+})
 Card.displayName = "Card"
 
 const CardHeader = React.forwardRef<

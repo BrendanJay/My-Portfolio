@@ -1,6 +1,6 @@
 import { motion, AnimatePresence } from "framer-motion"
-import { X, Volume2, VolumeX } from "lucide-react"
-import { useState, useRef, useEffect } from "react"
+import { X } from "lucide-react"
+import { useRef, useEffect } from "react"
 import { Button } from "./ui/button"
 
 interface VideoPlayerProps {
@@ -11,7 +11,6 @@ interface VideoPlayerProps {
 }
 
 export function VideoPlayer({ isOpen, onClose, videoSrc, title }: VideoPlayerProps) {
-  const [isMuted, setIsMuted] = useState(false)
   const videoRef = useRef<HTMLVideoElement>(null)
 
   useEffect(() => {
@@ -48,7 +47,7 @@ export function VideoPlayer({ isOpen, onClose, videoSrc, title }: VideoPlayerPro
               src={videoSrc}
               autoPlay
               controls
-              muted={isMuted}
+              muted={false}
               className="w-full h-full"
             />
 
@@ -61,15 +60,9 @@ export function VideoPlayer({ isOpen, onClose, videoSrc, title }: VideoPlayerPro
                 <Button
                   variant="ghost"
                   size="icon"
-                  onClick={() => setIsMuted(!isMuted)}
-                  className="text-white hover:bg-white/10 rounded-full"
-                >
-                  {isMuted ? <VolumeX className="w-5 h-5" /> : <Volume2 className="w-5 h-5" />}
-                </Button>
-                <Button
-                  variant="ghost"
-                  size="icon"
                   onClick={onClose}
+                  aria-label="Close video player"
+                  title="Close video player"
                   className="text-white hover:bg-white/10 rounded-full"
                 >
                   <X className="w-6 h-6" />

@@ -2,12 +2,13 @@ import { useEffect } from "react"
 import { useLocation } from "react-router-dom"
 import { Navbar } from "../components/Navbar"
 import { Hero } from "../components/Hero"
-import { Equipment } from "../components/Equipment"
-import { Projects } from "../components/Projects"
-import { Content } from "../components/Content"
+import { TechnicalStack } from "../components/TechnicalStack"
+import { FeaturedProjects } from "../components/FeaturedProjects"
+import { VideoWork } from "../components/VideoWork"
 import { Skills } from "../components/Skills"
-import { Experience } from "../components/Experience"
-import { Contact, Footer } from "../components/Contact"
+import { WorkExperience } from "../components/WorkExperience"
+import { Contact } from "../components/Contact"
+import { Footer } from "../components/Footer"
 import { CustomCursor } from "../components/CustomCursor"
 
 export function Home() {
@@ -28,17 +29,17 @@ export function Home() {
   }, [hash])
 
   return (
-    <div className="min-h-screen bg-[#08090a] text-white antialiased">
+    <div className="min-h-screen text-white antialiased">
       <CustomCursor />
       <Navbar />
 
       <main className="overflow-hidden">
         <Hero />
-        <Equipment />
-        <Projects />
+        <TechnicalStack />
+        <FeaturedProjects />
         <Skills />
-        <Experience />
-        <Content />
+        <WorkExperience />
+        <VideoWork />
         <Contact />
       </main>
 

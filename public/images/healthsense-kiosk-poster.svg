@@ -1,0 +1,83 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1280 720" fill="none">
+  <defs>
+    <linearGradient id="background" x1="120" y1="40" x2="1130" y2="700" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#10191A"/>
+      <stop offset="1" stop-color="#070A0C"/>
+    </linearGradient>
+    <linearGradient id="shell" x1="784" y1="99" x2="1054" y2="565" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#F1F4F1"/>
+      <stop offset=".52" stop-color="#C7D0CE"/>
+      <stop offset="1" stop-color="#899796"/>
+    </linearGradient>
+    <linearGradient id="screen" x1="811" y1="145" x2="1013" y2="385" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#102529"/>
+      <stop offset="1" stop-color="#071215"/>
+    </linearGradient>
+    <linearGradient id="stand" x1="874" y1="563" x2="970" y2="656" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#9DA8A7"/>
+      <stop offset="1" stop-color="#515E60"/>
+    </linearGradient>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientTransform="matrix(380 0 0 300 900 350)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#12B886" stop-opacity=".15"/>
+      <stop offset="1" stop-color="#12B886" stop-opacity="0"/>
+    </radialGradient>
+    <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0v32" stroke="#819394" stroke-opacity=".09"/>
+    </pattern>
+    <filter id="shadow" x="670" y="62" width="500" height="650" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse">
+      <feGaussianBlur stdDeviation="22"/>
+    </filter>
+  </defs>
+  <path fill="url(#background)" d="M0 0h1280v720H0z"/>
+  <path fill="url(#grid)" d="M0 0h1280v720H0z"/>
+  <path fill="url(#glow)" d="M0 0h1280v720H0z"/>
+  <path d="M0 584h1280" stroke="#829192" stroke-opacity=".15"/>
+  <ellipse cx="914" cy="634" fill="#000" fill-opacity=".65" filter="url(#shadow)" rx="190" ry="30"/>
+
+  <g opacity=".8">
+    <path d="M100 115h290" stroke="#59D6B1" stroke-opacity=".62"/>
+    <circle cx="100" cy="115" r="4" fill="#59D6B1"/>
+    <text x="100" y="156" fill="#DCE6E4" font-family="Arial,sans-serif" font-size="13" letter-spacing="3">HEALTHSENSE / 01</text>
+    <text x="100" y="233" fill="#F2F7F6" font-family="Arial,sans-serif" font-size="48" font-weight="600">Vitals kiosk</text>
+    <text x="100" y="270" fill="#9BAAA9" font-family="Arial,sans-serif" font-size="17">Raspberry Pi 5 · Embedded health station</text>
+    <path d="M100 315h350" stroke="#A4B7B4" stroke-opacity=".18"/>
+    <circle cx="108" cy="363" r="7" stroke="#59D6B1" stroke-opacity=".8"/>
+    <path d="m105 363 2 2 4-5" stroke="#59D6B1" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="128" y="368" fill="#C9D3D2" font-family="Arial,sans-serif" font-size="15">Touchscreen enclosure</text>
+    <circle cx="108" cy="407" r="7" stroke="#59D6B1" stroke-opacity=".8"/>
+    <path d="m105 407 2 2 4-5" stroke="#59D6B1" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
+    <text x="128" y="412" fill="#C9D3D2" font-family="Arial,sans-serif" font-size="15">Integrated biometric sensors</text>
+  </g>
+
+  <g>
+    <path d="M861 548h119l-14 100h-90l-15-100Z" fill="url(#stand)" stroke="#D9E0DE" stroke-opacity=".35"/>
+    <path d="M827 642h188l27 24H800l27-24Z" fill="#596668" stroke="#BBC5C3" stroke-opacity=".28"/>
+    <path d="M817 83c0-18 14-32 32-32h158c18 0 32 14 32 32v436c0 19-15 34-34 34H851c-19 0-34-15-34-34V83Z" fill="#000" fill-opacity=".26"/>
+    <path d="M805 76c0-17 14-31 31-31h170c17 0 31 14 31 31v438c0 18-14 32-32 32H837c-18 0-32-14-32-32V76Z" fill="url(#shell)" stroke="#F2F5F3" stroke-opacity=".62" stroke-width="2"/>
+    <path d="M815 83c0-12 10-22 22-22h168c12 0 22 10 22 22v309H815V83Z" fill="#253033"/>
+    <rect x="826" y="73" width="190" height="300" rx="9" fill="url(#screen)" stroke="#91A3A2" stroke-opacity=".5"/>
+    <path d="M845 111h152" stroke="#91A3A2" stroke-opacity=".32"/>
+    <circle cx="851" cy="94" r="3" fill="#5CE0B5"/>
+    <text x="863" y="98" fill="#D8E5E2" font-family="Arial,sans-serif" font-size="9" letter-spacing="1.5">HEALTHSENSE</text>
+    <text x="846" y="137" fill="#A9B8B7" font-family="Arial,sans-serif" font-size="10" letter-spacing="1">VITAL SIGNS</text>
+    <rect x="846" y="151" width="70" height="79" rx="7" fill="#142629" stroke="#61D9B4" stroke-opacity=".35"/>
+    <path d="M858 190c5-18 9 18 15 0s10-17 14 0 10 18 15 0" stroke="#5CE0B5" stroke-width="2" stroke-linecap="round"/>
+    <text x="858" y="215" fill="#9FB6B2" font-family="Arial,sans-serif" font-size="8">HEART RATE</text>
+    <rect x="926" y="151" width="70" height="79" rx="7" fill="#142629" stroke="#8AA4FF" stroke-opacity=".35"/>
+    <circle cx="961" cy="184" r="14" stroke="#8AA4FF" stroke-width="2" stroke-opacity=".8"/>
+    <path d="M961 184v-8m0 8 6 4" stroke="#D0D9FF" stroke-width="1.5" stroke-linecap="round"/>
+    <text x="941" y="215" fill="#9FB6B2" font-family="Arial,sans-serif" font-size="8">OXYGEN</text>
+    <rect x="846" y="241" width="150" height="53" rx="7" fill="#142629" stroke="#91A3A2" stroke-opacity=".24"/>
+    <text x="859" y="261" fill="#9FB6B2" font-family="Arial,sans-serif" font-size="8" letter-spacing="1">TEMPERATURE</text>
+    <path d="M859 278h122" stroke="#5CE0B5" stroke-opacity=".62" stroke-width="2" stroke-linecap="round"/>
+    <rect x="846" y="305" width="150" height="49" rx="7" fill="#1C514B"/>
+    <text x="890" y="335" fill="#E8F9F3" font-family="Arial,sans-serif" font-size="11" font-weight="600" letter-spacing="1">BEGIN CHECK</text>
+    <circle cx="910" cy="411" r="7" fill="#667574"/>
+    <circle cx="910" cy="411" r="3" fill="#172121"/>
+    <path d="M842 435h158" stroke="#AAB5B3" stroke-opacity=".5"/>
+    <rect x="858" y="455" width="108" height="33" rx="5" fill="#AAB4B2" stroke="#EEF1EF" stroke-opacity=".4"/>
+    <path d="M871 466h82m-82 7h82m-82 7h55" stroke="#717D7C" stroke-opacity=".62" stroke-linecap="round"/>
+    <path d="M829 525h184" stroke="#F7F9F7" stroke-opacity=".55"/>
+    <path d="M804 578h231" stroke="#D6DDDA" stroke-opacity=".2"/>
+  </g>
+</svg>
